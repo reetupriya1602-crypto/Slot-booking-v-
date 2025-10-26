@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GITAM Game Slot Booking</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <h1>🎮 GITAM Game Slot Booking</h1>
+
+  <!-- LOGIN SECTION -->
+  <div id="login-section" class="card">
+    <p>Enter your GITAM email:</p>
+    <input type="email" id="email-input" placeholder="yourname@gitam.in">
+    <button id="login-btn">Login</button>
+    <p id="login-error" class="error"></p>
+  </div>
+
+  <!-- BOOKING SECTION -->
+  <div id="booking-section" class="hidden">
+    <div class="card flex-between">
+      <p id="welcome-user"></p>
+      <button id="logout-btn" class="small-btn">Logout</button>
+    </div>
+
+    <!-- GAME SELECTION -->
+    <div id="game-list" class="card">
+      <h2>Select a Game</h2>
+      <button class="game-btn">🏸 Badminton</button>
+      <button class="game-btn">🏓 Table Tennis</button>
+      <button class="game-btn">🏀 Basketball</button>
+      <button class="game-btn">🏐 Volleyball</button>
+    </div>
+
+    <!-- DATE SELECTION -->
+    <div id="date-section" class="card hidden">
+      <h3>Select Date for Booking</h3>
+      <input type="date" id="booking-date">
+      <button id="date-next">Next</button>
+    </div>
+
+    <!-- SLOT SELECTION -->
+    <div id="slot-section" class="card hidden">
+      <h2 id="game-title"></h2>
+      <div id="slots" class="slots-grid"></div>
+      <button id="back-btn" class="small-btn">⬅ Back</button>
+    </div>
+
+    <!-- MY BOOKINGS -->
+    <div id="my-bookings" class="card">
+      <h2>My Bookings</h2>
+      <div class="points-container">
+        <p id="points-display">⭐ Points: 0</p>
+        <div class="progress-bar-bg">
+          <div id="points-bar" class="progress-bar"></div>
+        </div>
+      </div>
+      <p id="reward-display" class="reward-msg"></p>
+      <p id="progress-message" class="progress-msg"></p>
+      <ul id="bookings-list"></ul>
+    </div>
+
+    <!-- REWARD ROADMAP -->
+    <div id="reward-roadmap" class="card">
+      <h3>Rewards Roadmap</h3>
+      <ul>
+        <li>9 points → ⚡ Free Energy Drink</li>
+        <li>18 points → 🏸 Free Game Entry Pass</li>
+        <li>27 points → 🎁 GITAM Sports T-Shirt</li>
+      </ul>
+    </div>
+  </div>
+
+  <canvas id="confetti-canvas"></canvas>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
